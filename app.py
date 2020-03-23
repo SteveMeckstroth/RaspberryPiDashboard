@@ -9,7 +9,7 @@ def hello():
     pressure = round(sense.get_pressure(),2)
     temp = round((sense.get_temperature() * (9/5)) + 32,1)
     humidity = round(sense.get_humidity(),2)
-    message = "Pressure: {pressure} Temp: {temp}F Humidity: {humidity}".format(pressure, temp, humidity)
+    message = "Pressure: {0} Temp: {1}F Humidity: {2}".format(pressure, temp, humidity)
     if (temp < 120):
             color = blue
     elif (temp > 140):
@@ -36,9 +36,9 @@ setTimeout(function() {
 </script>
 </head>
 <body>
-<div><p><h1>Temp: {temp}</h1></p>
-    <p><h1>Pressure: {pressure}</h1></p>
-    <p><h1>Humidity: {humidity}</h1></p>
+<div><p><h1>Temp: {0}</h1></p>
+    <p><h1>Pressure: {1}</h1></p>
+    <p><h1>Humidity: {2}</h1></p>
 </div>
 </body>
 </html>
