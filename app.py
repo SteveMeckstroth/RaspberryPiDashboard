@@ -35,23 +35,23 @@ def hello():
     sleep(0.1)
     sense.clear((255,255,255))
     return """
-<html>
-<head>
-<script>
-setTimeout(function() {
-        location.reload();
-}, 30000);
-</script>
-</head>
-<body>
-<div><p><h1>Temp: {0}</h1></p>
-    <p><h1>Pressure: {1}</h1></p>
-    <p><h1>Humidity: {2}</h1></p>
-</div>
-</body>
-</html>
+            <html>
+            <head>
+            <script>
+            setTimeout(function() {
+                    location.reload();
+            }, 30000);
+            </script>
+            </head>
+            <body>
+            <div><p><h1>Temp: {0}</h1></p>
+                <p><h1>Pressure: {1}</h1></p>
+                <p><h1>Humidity: {2}</h1></p>
+            </div>
+            </body>
+            </html>
 
-""".format(temp, pressure, humidity)
+            """.format(temp, pressure, humidity)
 
 if __name__ == "__main__":
         app.run(host='0.0.0.0')
