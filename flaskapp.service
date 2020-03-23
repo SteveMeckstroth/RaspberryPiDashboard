@@ -4,7 +4,7 @@ Description=Start flask dashboard app
 After=mosquitto.service mysql.service
 
 [Service]
-ExecStart=/home/pi/RaspberryPiDashboard/app.py
+ExecStart=python /home/pi/RaspberryPiDashboard/app.py
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
