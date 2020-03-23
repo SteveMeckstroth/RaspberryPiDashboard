@@ -34,8 +34,7 @@ def hello():
     sense.set_pixel(7,7,blue)
     sleep(0.1)
     sense.clear((255,255,255))
-    html = """
-            <html>
+    html = """<html>
             <head>
             <script>
             setTimeout(function() {
@@ -44,14 +43,18 @@ def hello():
             </script>
             </head>
             <body>
-            <div><p><h1>Temp: {0}</h1></p>
-                <p><h1>Pressure: {1}</h1></p>
-                <p><h1>Humidity: {2}</h1></p>
+            <div><p><h1>Temp: """
+    html += temp
+    html += """</h1></p>
+                <p><h1>Pressure: """
+    html += pressure
+    html += """</h1></p>
+                <p><h1>Humidity: """
+    html += humidity
+    html += """</h1></p>
             </div>
             </body>
-            </html>
-
-            """.format(temp, pressure, humidity)
+            </html>"""
     return html
 
 if __name__ == "__main__":
