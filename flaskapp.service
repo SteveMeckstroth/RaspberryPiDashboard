@@ -1,7 +1,7 @@
 [Unit]
 Description=Start flask dashboard app
 
-After=mosquitto.service mysql.service
+After=bluetooth.service
 
 [Service]
 ExecStart=python /home/pi/RaspberryPiDashboard/app.py
