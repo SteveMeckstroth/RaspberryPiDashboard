@@ -4,6 +4,14 @@ from flask import Flask
 app = Flask(__name__)
 sense = SenseHat()
 
+red = (255,0,0)
+blue = (0,0,255)
+white = (255,255,255)
+green = (0,255,0)
+yellow = (255,255,0)
+
+rotation = [0, 90, 180, 270]
+
 @app.route("/")
 def hello():
     pressure = round(sense.get_pressure(),2)
