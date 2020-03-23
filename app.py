@@ -34,7 +34,7 @@ def hello():
     sense.set_pixel(7,7,blue)
     sleep(0.1)
     sense.clear((255,255,255))
-    return """
+    html = """
             <html>
             <head>
             <script>
@@ -52,6 +52,7 @@ def hello():
             </html>
 
             """.format(temp, pressure, humidity)
+    return html
 
 if __name__ == "__main__":
         app.run(host='0.0.0.0')
