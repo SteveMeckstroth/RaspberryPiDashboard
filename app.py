@@ -44,13 +44,13 @@ def hello():
             </head>
             <body>
             <div><p><h1>Temp: """
-    html += temp
+    html += str(temp)
     html += """</h1></p>
                 <p><h1>Pressure: """
-    html += pressure
+    html += str(pressure)
     html += """</h1></p>
                 <p><h1>Humidity: """
-    html += humidity
+    html += str(humidity)
     html += """</h1></p>
             </div>
             </body>
