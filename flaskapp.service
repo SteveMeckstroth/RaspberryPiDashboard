@@ -1,0 +1,16 @@
+[Unit]
+Description=Start flask dashboard app
+
+After=mosquitto.service mysql.service
+
+[Service]
+ExecStart=/home/pi/RaspberryPiDashboard/app.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Sunrise
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
